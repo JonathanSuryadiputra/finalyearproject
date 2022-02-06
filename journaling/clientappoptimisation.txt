@@ -1,0 +1,18 @@
+FYP CRUD Mobile App Idea
+- 1 teacher -> Many classes
+    - overall statistics from their many classes
+- 1 class
+    - 1 form, editable
+    - many students, add or remove
+    - monthly or weekly statistics, overall from each student.
+
+Questions Table
+- 1 class -> 1 form -> identifiable by form ID -> 1 formID -> many questions
+- add, edit, delete questions
+
+Class
+- 1 class -> many students
+- 1 student
+    - student name
+    - student email -> where forms with links to a webpage can be sent to.
+    - student phone

@@ -1,0 +1,2 @@
+A different approach that could be done would be to collect datasets of real texts originating from youths aged 12-19 and students, labeling them manually, and then putting them through the model.
+However, with the time constraint of only 8 months to do this project by an individual, and the steep learning curve that is present to be comfortable with the tools and frameworks to work on this model, labeling the datasets manually entry by entry is not feasible.

@@ -1,0 +1,3 @@
+- discussed infrastructure costs and switching to a better option.
+- decision to switch to AWS for now because GCP.
+- ask supervisor if college provides AWS sandbox cloud platform.

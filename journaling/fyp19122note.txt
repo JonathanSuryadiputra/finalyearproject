@@ -1,0 +1,9 @@
+things I can do to increase accuracy
+- label datasets
+- tune hyperparameters
+
+Some things I found out
+- naive bayes have no hyperparameters to tune as it is a simple algorithm (yet powerful when used with the right dataset). To increase accuracy data preprocessing is usually done (labelling data correctly, etc.) as well as feature selection.
+- LSTM models have hyperparameters that you can tune
+
+you can use these two models and approaches and strung them together in an ensemble of models.p
