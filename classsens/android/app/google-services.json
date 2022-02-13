@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "220001115945",
+    "project_id": "finalyearproject2122-f8288",
+    "storage_bucket": "finalyearproject2122-f8288.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220001115945:android:38c2c291696356cd95e138",
+        "android_client_info": {
+          "package_name": "com.example.classsens"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220001115945-nqiqgsbq4e8se92dtl7hsumivmb7gg7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNefffbahha0F79AYFyjVKBU3q4YnCm0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220001115945-nqiqgsbq4e8se92dtl7hsumivmb7gg7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
