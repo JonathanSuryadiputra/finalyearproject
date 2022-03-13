@@ -1,0 +1,2 @@
+gcloud builds submit --tag gcr.io/winged-fusion-343715/analyse
+gcloud run deploy --image gcr.io/winged-fusion-343715/analyse --memory 1Gi --platform managed

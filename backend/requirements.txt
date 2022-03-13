@@ -1,0 +1,10 @@
+Flask
+gunicorn
+tensorflow
+keras
+numpy
+spacy
+nltk
+regex
+six
+typing-extensions
