@@ -12,7 +12,6 @@ COPY . ./
 
 # Install production dependencies.
 RUN pip install --no-cache-dir -r requirements.txt
-RUN python3 -m spacy download en_core_web_sm
 
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
