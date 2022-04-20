@@ -1,0 +1,77 @@
+Hello everyone, my name is Jonathan Suryadiputra and today I will be presenting my final year project as well as my progress so far.
+
+Description of Project
+----------------------
+My final year project is a sentiment analysis application that accepts student feedback towards the courses they took as input.
+
+I aim to have 3 deliverables, the sentiment analysis unit, API that will connect to Project One Sky's webapp, as well as a mobile application built with Flutter.
+
+The API will connect both the mobile application as well as Project One Sky's web app to the App Engine container that holds the sentiment analysis model. It can also be integrated with other client applications other than the mobile app and Project One Sky.
+
+Value Proposition
+-----------------
+The main value of this project is that it is commissioned by Project One Sky, a wellbeing education startup, as a tool for their course research and development protocol.
+
+With their permission, I am also building a standalone Flutter mobile application outside of Project One Sky's business requirements, and it is targeted towards teachers who would like to analyse the overall sentiment of their students based on their feedback to the teacher’s class, to allow room for improvements on their class delivery methods.
+
+Main Learning Objectives
+------------------------
+The main learning outcomes from this project for myself is to gain an understanding on the topic of sentiment analysis, as well as to implement it using specialised machine learning frameworks.
+
+I am also hoping to understand the different machine learning models out there and pick which ones would be best to use for sentiment analysis work.
+
+It is also to provide experience building a mobile application for myself in a quick manner using Flutter and Firebase, as well as to create API endpoints using Flask server and a cloud platform.
+
+Technology Stack
+----------------
+Here is the technology stack that I will be using for this project.
+
+The main backend part which is the sentiment analysis unit will be trained using Jupyter Notebook implementing libraries such as Keras and scikit-learn, written in Python, saved as a Pickle object and loaded onto a Python script hosted on a Flask server contained in a Google Cloud Platform App Engine.
+
+This model can then be accessed as an API endpoint through HTTP connections.
+
+As for the mobile app, the database backend will be handled with Firebase, and the front end will be entirely done with Flutter SDK and the Dart programming language.
+
+Project Structure
+-----------------
+Here is a diagram of the project's components. As stated before, the model can be accessed through a HTTP API endpoint, and that API endpoint will be used to integrate the model to the Project One Sky web app as well as the mobile app, and for extensibility, it can be used to integrate the model with other client applications.
+
+Work that has been done
+-----------------------
+So far I've researched machine learning practices, experimented and built preliminary sentiment classifying models that are trained using various datasets. The best attempt I have is multinomial naive bayes model that is at 69% accuracy, however it still returns inaccurate classifications on sample input, and based on my research, you cannot really do any fine tuning with a naive bayes model, and the only thing that could improve it would be to find a better quality ad better suited dataset.
+
+I also have a trained LSTM model that is at 20% accuracy, and I will do more research to fine tune it to increase its accuracy. It was at first trained with a 0.5 learning rate, a softmax as well as a tanh activation as I am working with a probabilistic classification dataset, and a dropout of 0.2 to probabilistically exclude inputs and recurrent connections to LSTM units.
+
+I have also started building a Flutter application and we will look at a demo video of it as well as a testing of the draft model in action integrated with Project One Sky web app through the API endpoint.
+
+Challenges of the work
+----------------------
+The main problem I currently face is that sometimes the attempted models I have performed well with testing data, but is inaccurate when it comes to the unseen sample data. This is also the case with my other works involving machine learning such as a Data Science CA I have.
+
+I should have started researching the topics as well as collecting data earlier, over the summer, to better prepare myself at the start of the project on early October.
+
+So far I am not very happy with what I have done, however it is better than before the holidays and I'm comfortable working with the Flutter app now.
+
+Dataset Issues
+--------------
+One issue that is concerning is the inaccuracy of the dataset. The dataset may not closely match the language that would normally be used by students.
+
+The company will replace the training dataset that is used with this project with a more appropriate dataset for their commercial use.
+
+The training notebooks used may essentially serve as a boilerplate for the company and the dataset may be swapped out with a more appropriate one.
+
+Work that needs to be done
+--------------------------
+Alongside the Flutter mobile app, I will research LSTM and neural networks more and do fine-tuning on the model accordingly.
+
+I would need to connect the model to the mobile app as soon as possible as well.
+
+I will also plan on giving users of this project an option to set the type of model they would like to use or if they would want to use an ensemble of models for their student sentiment analysis purposes.
+
+Video Demo
+----------
+Here is a video demo of my project so far, both the Flutter app and the model integrated with Project One Sky.
+
+Ending
+------
+That's all for my final year presentation, thank you for listening!
