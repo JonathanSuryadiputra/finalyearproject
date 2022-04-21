@@ -1,0 +1,3 @@
+runtime: php74
+
+entrypoint: serve demo.php
