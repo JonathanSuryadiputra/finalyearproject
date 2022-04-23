@@ -1,0 +1,16 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /responseform
+  static_files: www/responseform.html
+  upload: www/responseform.html
+
+- url: /thankyou
+  static_files: www/thankyou.html
+  upload: www/thankyou.html
+
+- url: /(.*)
+  static_files: www/\1
+  upload: www/(.*)

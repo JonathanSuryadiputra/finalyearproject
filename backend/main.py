@@ -11,11 +11,11 @@ from keras.preprocessing.sequence import pad_sequences
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 
-model = load_model('model.h5') # load LSTM sentiment analysis data model.
+model = load_model('lstm_model.h5') # load LSTM sentiment analysis data model.
 tokeniser = pickle.load(open('tokeniser.p', 'rb')) # load pickle file of the text tokeniser.
 
-sarcasm_detector = load_model('sarcasmdetector.h5') # load LSTM sarcasm detector model
-sarcasm_tokeniser = pickle.load(open('sarcasmtokeniser.p', 'rb')) # load sarcasm word tokeniser; not the same as the regular tokeniser as it has different configurations.
+sarcasm_detector = load_model('sarcasm_detector.h5') # load LSTM sarcasm detector model
+sarcasm_tokeniser = pickle.load(open('sarcasm_tokeniser.p', 'rb')) # load sarcasm word tokeniser; not the same as the regular tokeniser as it has different configurations.
 
 def convertToNeg(N):
     '''
@@ -54,7 +54,7 @@ def get_sentiment(text):
     '''
     seq = tokeniser.texts_to_sequences([text]) # put text in a list and use tokeniser to convert the text to sequence
     # putting text in a list as the function only accepts lists of strings not individual strings
-    padded = pad_sequences(seq, maxlen=600, padding='post', truncating='post') # pad the sequence
+    padded = pad_sequences(seq, maxlen=500, padding='post', truncating='post') # pad the sequence
     pred = model.predict(padded) # predict padded sequence of text
     predSentiment = np.argmax(pred)-3 # return the integer label substracted by 3 to match the software requirements of labels between -2 to 2 (original labels are 1 to 5)
     return predSentiment # return the sentiment score
@@ -67,7 +67,7 @@ def detect_sarcasm(text):
     '''
     # process is similar to the get_sentiment(text) function
     seq = sarcasm_tokeniser.texts_to_sequences([text])
-    padded = pad_sequences(seq, maxlen=600, padding='post', truncating='post')
+    padded = pad_sequences(seq, maxlen=100, padding='post', truncating='post')
     pred = sarcasm_detector.predict(padded)
     isSarcastic = np.argmax(pred) # returns either a 0 (no sarcasm detected) or 1 (sarcasm detected)
     return isSarcastic # return prediction to main control
