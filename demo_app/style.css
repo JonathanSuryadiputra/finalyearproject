@@ -1,0 +1,59 @@
+/* general css */
+@font-face {
+    font-family: 'FrontPageNeue';
+    src: url('font-styles/Rubik/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+body {
+    font-family: 'FrontPageNeue', Fallback, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-color: #7bbeea;
+    color: white
+}
+.formcontainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.outcomecontainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.review {
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'FrontPageNeue', Fallback, sans-serif;
+}
+.review:focus {
+    outline: none;
+}
+.submit {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #c7ea46;
+    color: white;
+    font-size: 20px;
+    width: 250px;
+}
+.submit:focus {
+    outline: none;
+}
+.submit:hover {
+    cursor: pointer;
+    background-color: #adcc3b;
+    color: #f0f0f0;
+}
+.submit:active {
+    cursor: pointer;
+    background-color: #99b533;
+    color: #e3e3e3;
+}
