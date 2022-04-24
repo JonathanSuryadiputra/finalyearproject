@@ -9,12 +9,14 @@ function getSentiment($text) {
 function buildOutcomePage($reviewText, $sentiment) {
     echo "<html>
         <head>
+            <title>Sentiment Result</title>
             <link rel='stylesheet' href='style.css'>
             <link rel='icon' type='image/png' href='favicon.png'>
         </head>
         <body>
             <div class='outcomecontainer'>
-                <h1>Sentiment result</h1>
+                <img src='pos-logo-white.png' width='300px'>
+                <h1>Sentiment Result</h1>
                 <h2>Review text:</h2>
                 <p style='width: 50%; text-align: center; text-justify: inter-word; line-height: 1.5;'>" . $reviewText . "</p>
                 <h3>Sentiment weighting: " . $sentiment . "</h3>
