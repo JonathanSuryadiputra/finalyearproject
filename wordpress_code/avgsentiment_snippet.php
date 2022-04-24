@@ -152,9 +152,23 @@ echo "function createShortLabels(count) {
                         ticks: {
                             beginAtZero: false,
                             steps: 5,
-                            stepValue: 1,
+                            stepSize: 1,
                             max: 2,
-                            min: -2
+                            min: -2,
+                            callback: function(label, index, labels) {
+                                switch (label) {
+                                    case 2:
+                                        return 'Positive';
+                                    case 1:
+                                        return 'Somewhat Positive';
+                                    case 0:
+                                        return 'Neutral';
+                                    case -1:
+                                        return 'Somewhat Negative';
+                                    case -2:
+                                        return 'Negative';
+                                }
+                            }
                         }
                     }]
                 },
